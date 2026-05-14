@@ -23,7 +23,7 @@ public class JournalEntryController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping("{userName}")
     public ResponseEntity<?> getAllJournalEntriesOfUser(@PathVariable String userName){
         User user = userService.findUserName(userName);
         List<JournalEntry> all = user.getJournalEntries();
