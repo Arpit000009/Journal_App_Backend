@@ -54,9 +54,9 @@ public class UserService {
         return userRepository.findByUserName(userName);
     }
 
-    public void updateUser(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRoles(Arrays.asList("USER"));// encode fresh plain text
-        userRepository.save(user);
-    }
+//    public void updateUser(User user) {
+//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+//        user.setRoles(Arrays.asList("USER"));// encode fresh plain text
+//        userRepository.save(user);
+//    }
 }
