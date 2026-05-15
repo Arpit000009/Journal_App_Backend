@@ -1,6 +1,7 @@
 package com.pro.journalApp.Entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Document(collection = "users")
 @Data
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -25,4 +27,5 @@ public class User {
 
     @DBRef
     private List<JournalEntry> journalEntries = new ArrayList<>();
+    private List<String>roles;
 }
