@@ -25,7 +25,6 @@ public class JournalEntryService {
     @Autowired
     private UserService userService;
 
-    @Transactional
     public void saveEntry(JournalEntry journalEntry, String userName){
         try {
             User user = userService.findUserName(userName);

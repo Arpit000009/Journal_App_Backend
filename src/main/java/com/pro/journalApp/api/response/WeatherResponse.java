@@ -11,14 +11,23 @@ import java.util.List;
 public class WeatherResponse {
 
     private Current current;
+    private Location location;
 
     @Getter
     @Setter
-    public class Current{
+    public static class Location {
+        private String name;
+        private String country;
+    }
+
+    @Getter
+    @Setter
+    public static class Current {
+
         private int temperature;
 
         @JsonProperty("weather_descriptions")
-                private List<String> weatherDescriptions;
+        private List<String> weatherDescriptions;
 
         private int feelslike;
     }
