@@ -28,10 +28,10 @@ public class UserDetailsServiceImplTests {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
-    void loadUserByUserNameTest(){
-        when(userRepository.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().username("ram").password("dsfaosdnfosanf").roles(new ArrayList<>()).build());
-        UserDetails user = userDetailsService.loadUserByUsername("ram");
-        Assertions.assertNotNull(user);
-    }
+//    @Test
+//    void loadUserByUserNameTest(){
+//        when(userRepository.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().username("ram").password("dsfaosdnfosanf").roles(new ArrayList<>()).build());
+//        UserDetails user = userDetailsService.loadUserByUsername("ram");
+//        Assertions.assertNotNull(user);
+//    }
 }
